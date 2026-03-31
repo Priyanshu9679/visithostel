@@ -13,7 +13,7 @@ import "swiper/css";
 const Header = () => {
   const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  
+
   // NEW: State to track which mobile dropdowns are open
   const [openDropdowns, setOpenDropdowns] = useState({
     rooms: false,
@@ -37,8 +37,8 @@ const Header = () => {
           <div className="container">
             <div className="header-inner">
               <div className="header-menu ">
-                <div 
-                  className="header-menu-icon" 
+                <div
+                  className="header-menu-icon"
                   onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                   style={{ cursor: "pointer" }}
                 >
@@ -69,10 +69,10 @@ const Header = () => {
 
                       {/* ROOMS DROPDOWN */}
                       <li>
-                        <NavLink 
-                          to="/room" 
+                        <NavLink
+                          to="/room"
                           className={({ isActive }) => "nav-main " + (isActive || location.pathname === "/doublerooms" ? "active" : "")}
-                          
+
                         >
                           <IoIosArrowDown className={`header-s-arrow ${openDropdowns.rooms ? "rotate" : ""}`} onClick={(e) => toggleDropdown(e, "rooms")} />
                           Rooms
@@ -86,8 +86,8 @@ const Header = () => {
 
                       {/* BLOG DROPDOWN */}
                       <li>
-                        <NavLink 
-                          to="/blog" 
+                        <NavLink
+                          to="/blog"
                           className={({ isActive }) => "nav-main " + (isActive || location.pathname === "/classicblog" ? "activel" : "")}
                         >
                           <IoIosArrowDown className={`header-s-arrow ${openDropdowns.blog ? "rotate" : ""}`} onClick={(e) => toggleDropdown(e, "blog")} />
@@ -100,6 +100,8 @@ const Header = () => {
                             <li><Link to="/gridblog2">Grid Blog 2</Link></li>
                             <li><Link to="/gridblog3">Grid Blog 3</Link></li>
                             <li><Link to="/blogpost">Blog Post</Link></li>
+                            <li><Link to="/blogpost">Blog Post1</Link></li>
+                            <li><Link to="/blogpost">Blog Post2</Link></li>
                           </ul>
                         )}
                       </li>
@@ -112,8 +114,8 @@ const Header = () => {
 
                       {/* PAGES DROPDOWN */}
                       <li>
-                        <NavLink 
-                          to="/" 
+                        <NavLink
+                          to="/"
                           className={({ isActive }) => "nav-main " + (isActive ? "activel" : "")}
                         >
                           <IoIosArrowDown className={`header-s-arrow ${openDropdowns.pages ? "rotate" : ""}`} onClick={(e) => toggleDropdown(e, "pages")}   />
@@ -155,7 +157,7 @@ const Header = () => {
               </div>
               <div className="header-item-btn dis-no">
                 <i class="fa-solid fa-ellipsis-vertical"></i>
-              {/* </div> */}
+                {/* </div> */}
 
 
                 {/* ... */}
@@ -164,7 +166,7 @@ const Header = () => {
           </div>
         </div>
 
-        
+
         <div className="header-bottom">
           <div className="container">
             <div className="header-inner">

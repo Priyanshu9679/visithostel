@@ -100,8 +100,6 @@ const Header = () => {
                             <li><Link to="/gridblog2">Grid Blog 2</Link></li>
                             <li><Link to="/gridblog3">Grid Blog 3</Link></li>
                             <li><Link to="/blogpost">Blog Post</Link></li>
-                            <li><Link to="/blogpost">Blog Post1</Link></li>
-                            <li><Link to="/blogpost">Blog Post2</Link></li>
                           </ul>
                         )}
                       </li>
